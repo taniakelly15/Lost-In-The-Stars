@@ -78,7 +78,7 @@ function setup() {
   //tars = createGraphics(width * 2, height * 2);
   //stars.background(0);
   for (let i = 0; i < 900; i++) {
-    stars.strokeWeight(random(0.000001, 2.5));
+    stars.strokeWeight(random(0.000001, 2.8));
     stars.stroke("white");
     stars.point(random(0, windowWidth), random(0, windowHeight));
     //stars.ellipse(starX, starY, random(0.001,2), random(0.001,2));
@@ -135,7 +135,7 @@ function draw() {
       noStroke();
       let aniX = sin(rot[i]) / orbit[i];
       let aniY = cos(rot[i]) / orbit[i];
-      // rotateZ ( sin(rot[i]) / orbit[i]);
+      rotateZ ( sin(rot[i]) / orbit[i]);
       translate(aniX, aniY, B);
       let starX = -windowWidth / 2; //width limit
       let starY = -windowHeight / 2;
@@ -248,7 +248,7 @@ function draw() {
       translate(50, 0, E);
       texture(moon);
       sphere(radiusplanet4);
-      E = 0.8 + E++;
+      E = 0.5 + E++;
       pop();
     }
 
